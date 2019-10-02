@@ -19,7 +19,7 @@ class NewTodoForm extends Component {
 
     handleSubmit(evt) {
         evt.preventDefault();
-        this.props.createTodo({...this.state, id : uuid()});
+        this.props.createTodo({...this.state, id : uuid(), completed: false });
         // we reset the state so all the info in the form is gone
         this.setState({ task: "" })
     }
